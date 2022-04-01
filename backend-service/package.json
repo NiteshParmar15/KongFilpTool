@@ -1,0 +1,24 @@
+{
+  "name": "kongenvtool",
+  "version": "1.0.0",
+  "description": "Kong environment managment tool",
+  "main": "node server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TV2DevOps",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.1.5",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  }
+}

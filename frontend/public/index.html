@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>Kong-Flip</title>
+    <script src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.serializejson.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <img id="image" alt="">
+<form id="flip_form" action="javascript:;" onsubmit="return flip(this);" name="post" method="post">
+    <p>Select service whose default environment will be switched:</p>
+    <script>provider()</script>
+    <div>
+    <select class="form-control" id='service_list' name="service"></select>
+    </div>
+    <div id="label">
+    </div>
+    <div><button type="submit" id="flip_btn" class="btn btn-primary">Switch default environment</button></div>
+</form>
+
+</body>
+
+</html>

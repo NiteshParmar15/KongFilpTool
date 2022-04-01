@@ -1,0 +1,114 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Kong Flip Tool",
+		"description": "Tool for flip live environment using Kong API Gateway"
+	},
+	"basePath": "/",
+	"schemes": [
+		"http"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"paths": {
+		"/api/flip": {
+			"post": {
+				"tags": [
+					"Flip"
+				],
+				"parameters":[
+					{
+                        "name":"operator",
+                        "in": "body",
+                        "description": "operator name accepted values: CCAP",
+                        "required": true,
+                        "type": "string"
+					},
+					{
+                        "name":"service",
+                        "in": "body",
+                        "description": "service name, accepted values: server, client",
+                        "required": true,
+                        "type": "string"
+					}
+                ],
+				"summary": "Flip service from current env (Live) to other env",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Flip"
+						}
+					}
+				}
+			}
+		},
+		"/api/env": {
+			"post": {
+				"tags": [
+					"Env"
+				],
+				"parameters":[
+					{
+                        "name":"operator",
+                        "in": "body",
+                        "description": "operator name accepted values: CCAP",
+                        "required": true,
+                        "type": "string"
+					},
+					{
+                        "name":"service",
+                        "in": "body",
+                        "description": "service name, accepted values: server, client",
+                        "required": true,
+                        "type": "string"
+					}
+                ],
+				"summary": "Get current environment",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Env"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Flip": {
+			"required": [
+				"operator",
+				"service"
+			],
+			"properties": {
+				"status": {
+					"type": "boolean"
+				},
+			    "message": {
+					"type": "string"
+				}
+			}
+		},
+		"Env": {
+			"required": [
+				"operator",
+				"service"
+			],
+			"properties": {
+				"status": {
+					"type": "boolean"
+				},
+			    "message": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

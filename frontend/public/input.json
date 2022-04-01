@@ -1,0 +1,48 @@
+{
+    "CCAP": {
+        "kongIp": [
+            "10.60.56.144",
+            "10.60.56.145"
+        ],
+        "keepalived": "10.60.56.143",
+        "services": {
+            "ott-client-rest-api": {
+                "header": null,
+                "envapi": "env/getEnvVariable",
+                "servicenameBlue": "CCAPClientrestBlue",
+                "servicenameGreen": "CCAPClientrestGreen",
+                "port": "8000"
+            },
+            "ott-server-rest-api": {
+                "header": "server-rest",
+                "envapi": "api/envVariables/getEnvVariable",
+                "servicenameBlue": "CCAPServerrestBlue",
+                "servicenameGreen": "CCAPServerrestGreen",
+                "port": "4002"
+            }
+        }
+    },
+    "TRN": {
+            "kongIp": [
+                "10.60.56.144",
+                "10.60.56.145"
+            ],
+            "keepalived": "10.60.56.143",
+            "services": {
+                "ott-client-rest-api": {
+                    "header": null,
+                    "envapi": "env/getEnvVariable",
+                    "servicenameBlue": "CCAPClientrestBlue",
+                    "servicenameGreen": "CCAPClientrestGreen",
+                    "port": "8000"
+                },
+                "ott-server-rest-api": {
+                    "header": "server-rest",
+                    "envapi": "api/envVariables/getEnvVariable",
+                    "servicenameBlue": "CCAPServerrestBlue",
+                    "servicenameGreen": "CCAPServerrestGreen",
+                    "port": "4002"
+                }
+            }
+        }
+}

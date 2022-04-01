@@ -1,0 +1,23 @@
+{
+    "CCAP": {
+        "kongIp": [
+            "kongip1",
+            "kongip1"
+        ],
+        "keepalived": "localhost",
+        "services": {
+            "client": {
+                "header": null,
+                "envapi": "env/getEnvVariable",
+                "servicenameBlue": "CCAPClientrestBlue",
+                "servicenameGreen": "CCAPClientrestGreen"
+            },
+            "server": {
+                "header": "server-rest",
+                "envapi": "api/envVariables/getEnvVariable",
+                "servicenameBlue": "CCAPServerrestBlue",
+                "servicenameGreen": "CCAPServerrestGreen"
+            }
+        }
+    }
+}    
